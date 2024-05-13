@@ -3,6 +3,8 @@ resource "aws_key_pair" "terraform-key" {
     public_key = file("${path.module}/terraform-key.pub")
 }
 
+#Security Group
+
 resource "aws_security_group" "my-security-group" {
     name        = "terraform-security-group"
     description = "Allow inbound traffic"
